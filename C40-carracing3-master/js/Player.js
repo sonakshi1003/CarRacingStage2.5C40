@@ -34,15 +34,15 @@ class Player {
     })
   }
 
-  getCarsAtEnd(){
-  database.ref('CarAtEnd').on("value",(data)=>{
-   this.rank = data.val();
-  }); 
+  getCarsAtEnd() {
+    database.ref('CarsAtEnd').on("value",(data)=>{
+      this.rank = data.val();
+    })
   }
 
-  static updateCarsAtEnd(rank){
-  database.ref('/').update({
-  CarsAtEnd: rank
-  })
+  static updateCarsAtEnd(rank) {
+    database.ref('/').update({
+      CarsAtEnd:rank
+    })
   }
 }
